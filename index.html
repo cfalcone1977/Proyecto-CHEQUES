@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora CHEQUES</title>
+</head>
+<body>
+    <div>
+      <P>TASAS A APLICAR</P>
+      <input type="number" id="tasa_diaria" placeholder="% diaria">
+      <input type="number" id="tasa_al_dia" placeholder="% al día">
+      <input type="number" id="tasa_7dias" placeholder="% 7 días">
+      <input type="number" id="tasa_15dias" placeholder="% 15 días">
+      <input type="number" id="tasa_30dias" placeholder="% 30 días">
+    </div>  
+    <div id="cajaCheques">
+      <h3>CHEQUES A CALCULAR</h3>
+      <pre>    MONTO CHEQUE               FECHA           DIAS        PORC%      DESC$     LIQUIDAR$</pre>
+      <input type="number" class="cheque" placeholder="$ 0,00">
+      <input type="date" class="fecha" placeholder="DD/MM/AA"><pre class="datos"></pre>
+      <p></p>   
+      <input type="number" class="cheque" placeholder="$ 0,00">
+      <input type="date"  class="fecha" placeholder="DD/MM/AA">
+      <p></p>
+      <input type="number" class="cheque" placeholder="$ 0,00">
+      <input type="date"  class="fecha" placeholder="DD/MM/AA">
+      <p></p>
+      <input type="number" class="cheque" placeholder="$ 0,00">
+      <input type="date"  class="fecha" placeholder="DD/MM/AA">
+      <p></p>
+      <input type="number" class="cheque" placeholder="$ 0,00">
+      <input type="date"  class="fecha" placeholder="DD/MM/AA">
+      <p></p>    
+      <div class="BOTON"> 
+        <button id="calcular">CALCULAR</button>
+      </div> 
+      
+    </div>
+    <div>
+      <p>RESULTADOS</p>
+      <span>MONTO TOTAL EN CHEQUES $: </span>
+      <p></p>
+      <span>DIFERENCIA PROMEDIO en %: </span><span id="DIFPORCENT"></span>
+      <p></p>
+      <span>DIFERENCIA en $: </span><span id="DIFPESOS"></span>
+      <p></p>
+      <span>DINERO TOTAL A PAGAR: </span><span id="TOTALPAGAR"></span>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
