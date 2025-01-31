@@ -7,7 +7,7 @@
     <title>Calculadora CHEQUES</title>
 </head>
 <body>
-    <div>
+    <div class="encabezado">
       <P>TASAS A APLICAR</P>
       <input type="number" id="tasa_diaria" placeholder="% diaria">
       <input type="number" id="tasa_al_dia" placeholder="% al día">
@@ -15,6 +15,28 @@
       <input type="number" id="tasa_15dias" placeholder="% 15 días">
       <input type="number" id="tasa_30dias" placeholder="% 30 días">
     </div>  
+    <div class="detalleCHQs">
+        <table>
+            <tr>
+              <th> DIAS </th>
+              <th> PORC% </th>
+              <th> DESC$ </th>
+              <th> LIQUIDAR$</th>          
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>9.18</td>
+              <td>130000</td>
+              <td id="liqui0">$ 18000</td>          
+            </tr>
+            <tr>
+              <td>26</td>
+              <td>5</td>
+              <td>1000</td>
+              <td id="liqui1">$ 1354000</td>      
+            </tr>
+          </table>
+    </div>
     <div id="cajaCheques">
       <h3>CHEQUES A CALCULAR</h3>
       <pre>    MONTO CHEQUE               FECHA         DIAS      PORC%        DESC$        LIQUIDAR$</pre>

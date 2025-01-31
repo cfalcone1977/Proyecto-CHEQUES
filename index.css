@@ -1,3 +1,9 @@
+.encabezado{
+ width: 500;
+ height: 400;
+ flex: auto;
+ background-color: aqua;
+}
 .resultados {
  margin-bottom: 0;
  display: inline-block;
@@ -10,4 +16,30 @@
 #calcular {
   background-color: green;
 
+}
+#datos0 {
+  font-family: monospace;
+  white-space: pre;
+}
+#datos1 {
+font-family: monospace; 
+white-space: pre;
+}
+#datos2 {
+font-family: monospace;
+white-space: pre;
+}
+#datos3 {
+font-family: monospace;  
+white-space: pre;
+}
+#datos4 {
+font-family: monospace;  
+white-space: pre;
+}
+
+
+#liqui0, #liqui1{
+white-space: pre;  
+text-align: right;
 }
