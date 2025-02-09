@@ -223,6 +223,50 @@ DiferenciaProfit.textContent="$ " + Diferencia;
             }    
       mostrarDatos(cheque);
       mostrarResultados(montoTotalBruto,montoTotalPagar,tasaTotal,contador);
-   
-                                               });
+                     });
+
+
+
+
+
+
+
+      //fetch("https://api.bcra.gob.ar/cheques/v1.0/entidades")
+      //.then(res => res.json())    
+      //.then(data => {
+      //       const BANCOS=[];
+      //       const nuevoBanco={codigo:data.codigoEntidad, nombre:data.denominacion};
+      //       console.log(data);
+      //              });
+               
+     /*
+      const banco={numero:0,nombre:""};
+      async function traerEntidades (){
+         try{
+           const res=await fetch(dirEntidades);
+           const {results} = await res.json();
+           let BANCOS=[];
+           let banco={numero:0,nombre:""};
+           console.log(results.length);
+           for (let i = 0; i < results.length; i=i+1) {
+                  banco.numero=results[i].codigoEntidad;
+                  banco.nombre=results[i].denominacion;
+                  console.log("Nro.:",banco.numero," Nombre:",banco.nombre);
+                  console.log(banco);
+                  BANCOS.push(banco);
+                  console.log(BANCOS[i].nombre);
+           }
+            }
+         catch (error){
+            console.log(error);
+            }
+      console.log("-------------------------");
+      console.log(BANCOS[15].nombre);      
+      }
+
+      traerEntidades();
+
+
+     */
+                                              
   
