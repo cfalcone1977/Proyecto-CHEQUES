@@ -76,7 +76,11 @@ const CHQ = {
     if ((dias>30) && (dias<90)) {
      tasa_total=Number(tasaDiaria.value*(dias-30)) + Number(tasa30Dias.value);
      return tasa_total;                   
-}    
+    }    
+    if ((dias>=90)) {
+      tasa_total=Number(tasaDiaria.value*dias);
+     return tasa_total;                     
+                    }
 return 0;    
 
 }
@@ -214,8 +218,6 @@ DiferenciaProfit.textContent="$ " + Diferencia;
               cheque[i].M_a_Cobrar=CalculoM_a_Cobrar(cheque[i].tasa,cheque[i].Mbruto);
               montoTotalBruto=montoTotalBruto + cheque[i].Mbruto;
               montoTotalPagar=montoTotalPagar+cheque[i].M_a_Cobrar;
-              //tasaTotal=Number(tasaTotal)+Number(cheque[i].tasa);
-              //console.log(tasaTotal); 
               if (Number(cheque[i].Mbruto)>0) {
                                                 tasaTotal=Number(tasaTotal)+Number(cheque[i].tasa);
                                                 contador=contador+1;

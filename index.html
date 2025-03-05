@@ -7,15 +7,20 @@
     <title>Calculo CHEQUES</title>
 </head>
 <body>
-    <div>
-      <P>TASAS A APLICAR</P>
-      <input type="number" id="tasa_diaria" placeholder="% diaria">
+    <div class="CAJA-tasas">
+      <h3>TASAS A APLICAR</h3>
+      <label for="TASADIARIA">Diaria</label>
+      <input type="number" id="tasa_diaria" placeholder="% diario" size="5">
+      <label for="TASAALDIA">Al Dia</label>
       <input type="number" id="tasa_al_dia" placeholder="% al día">
+      <label for="TASA7DIAS">7D</label>
       <input type="number" id="tasa_7dias" placeholder="% 7 días">
+      <label for="TASA15DIAS">15D</label>
       <input type="number" id="tasa_15dias" placeholder="% 15 días">
+      <label for="TASA30DIAS">30D</label>
       <input type="number" id="tasa_30dias" placeholder="% 30 días">
     </div>  
-    <div id="cajaCheques">
+    <div class="CAJA-cheques">
       <h3>CHEQUES A CALCULAR</h3>
       <pre>    MONTO CHEQUE               FECHA         DIAS      PORC%        DESC$        LIQUIDAR$</pre>
       <input type="number" class="cheque" placeholder="$ 0,00">
@@ -38,8 +43,8 @@
       </div> 
       
     </div>
-    <div>
-      <p>RESULTADOS</p>
+    <div class="CAJA-resultados">
+      <h3>RESULTADOS</h3>
       <pre class="resultados">MONTO TOTAL EN CHEQUES:     </pre><span id="TOTALBRUTO"></span>
       <p></p>
       <pre class="resultados">TASA PROMEDIO:              </pre><span id="DIFPORCENT"></span>

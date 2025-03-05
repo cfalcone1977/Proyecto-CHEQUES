@@ -1,9 +1,3 @@
-.encabezado{
- width: 500;
- height: 400;
- flex: auto;
- background-color: aqua;
-}
 .resultados {
  margin-bottom: 0;
  display: inline-block;
@@ -17,29 +11,40 @@
   background-color: green;
 
 }
-#datos0 {
+#datos0, #datos1, #datos2, #datos3, #datos4{
   font-family: monospace;
   white-space: pre;
 }
-#datos1 {
-font-family: monospace; 
-white-space: pre;
-}
-#datos2 {
-font-family: monospace;
-white-space: pre;
-}
-#datos3 {
-font-family: monospace;  
-white-space: pre;
-}
-#datos4 {
-font-family: monospace;  
-white-space: pre;
-}
 
+.CAJA-tasas{
+  border:1px solid beige;
+  border-radius: 10px;
+  padding: 15px;
+  width: 650px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px black;
+  /*display: flex;
+  flex-direction: row;*/
+  }
+.CAJA-tasas input{
+  width: 75px;
+  height: 15px;
+}  
 
-#liqui0, #liqui1{
-white-space: pre;  
-text-align: right;
+.CAJA-cheques{
+  border:1px solid beige;
+  border-radius: 10px;
+  padding: 15px;
+  width: 650px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px black;
+  }
+
+.CAJA-resultados{
+border:1px solid beige;
+border-radius: 10px;
+padding: 15px;
+width: 650px;
+margin-top: 10px;
+box-shadow: 5px 5px 10px black;
 }
