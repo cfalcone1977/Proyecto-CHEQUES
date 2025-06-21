@@ -37,3 +37,8 @@ function ConsultarChequesRechazados(cuit_a_verificar){
 consultaCuit("20261346959");
 ConsultarChequesRechazados("20228864936");
 
+
+/*¿Qué porcentaje de descuento se aplicó? 
+Resta el precio final del precio original: 50 − 35 = 15. 
+Divide el resultado entre el precio original: 15 ÷ 50 = 0,30. 
+Multiplica por 100 para obtener el porcentaje: 0,30 × 100 = 30%.*/

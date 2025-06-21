@@ -10,7 +10,13 @@ const CHQ = {
     {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
     {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
     {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
-    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000}];
+    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
+    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
+    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
+    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
+    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
+    {Mbruto:12000,fcobro:"01/01/2025",dias:1,tasa:0,M_a_Cobrar:15000},
+  ];
   console.log(cheque);
   
   const cheque_aux=document.querySelectorAll('.cheque'); // genero arreglo con el importe de todos los cheques
@@ -28,7 +34,11 @@ const CHQ = {
   let DATOS2=document.getElementById('datos2');
   let DATOS3=document.getElementById('datos3');
   let DATOS4=document.getElementById('datos4');
-
+  let DATOS5=document.getElementById('datos5');
+  let DATOS6=document.getElementById('datos6');
+  let DATOS7=document.getElementById('datos7');
+  let DATOS8=document.getElementById('datos8');
+  let DATOS9=document.getElementById('datos9');
 
 
   const boton_calcular = document.getElementById('calcular');
@@ -108,6 +118,12 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     let dif2=CHEQUE[2].Mbruto - CHEQUE[2].M_a_Cobrar; 
     let dif3=CHEQUE[3].Mbruto - CHEQUE[3].M_a_Cobrar; 
     let dif4=CHEQUE[4].Mbruto - CHEQUE[4].M_a_Cobrar; 
+    let dif5=CHEQUE[5].Mbruto - CHEQUE[4].M_a_Cobrar; 
+    let dif6=CHEQUE[6].Mbruto - CHEQUE[6].M_a_Cobrar; 
+    let dif7=CHEQUE[7].Mbruto - CHEQUE[7].M_a_Cobrar; 
+    let dif8=CHEQUE[8].Mbruto - CHEQUE[8].M_a_Cobrar; 
+    let dif9=CHEQUE[9].Mbruto - CHEQUE[9].M_a_Cobrar; 
+
     for (let i = 0; i < CHEQUE.length; i=i+1) {
       CHEQUE[i].tasa=CHEQUE[i].tasa.toLocaleString('es-Es',{minimumFractionDigits: 2, maximumFractionDigits: 2});
       CHEQUE[i].M_a_Cobrar=CHEQUE[i].M_a_Cobrar.toLocaleString('es-Es',{minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -117,6 +133,14 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     dif2=dif2.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
     dif3=dif3.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
     dif4=dif4.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
+    dif5=dif5.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
+    dif6=dif6.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
+    dif7=dif7.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
+    dif8=dif8.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
+    dif9=dif9.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
+    
+
+
     let textoDias0=CHEQUE[0].dias.toString();
     textoDias0=textoDias0.padStart(6);
     let textoDias1=CHEQUE[1].dias.toString();
@@ -127,6 +151,17 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     textoDias3=textoDias3.padStart(6);
     let textoDias4=CHEQUE[4].dias.toString();
     textoDias4=textoDias4.padStart(6);
+    let textoDias5=CHEQUE[5].dias.toString();
+    textoDias5=textoDias5.padStart(6);
+    let textoDias6=CHEQUE[6].dias.toString();
+    textoDias6=textoDias6.padStart(6);
+    let textoDias7=CHEQUE[7].dias.toString();
+    textoDias7=textoDias7.padStart(6);
+    let textoDias8=CHEQUE[8].dias.toString();
+    textoDias8=textoDias8.padStart(6);
+    let textoDias9=CHEQUE[9].dias.toString();
+    textoDias9=textoDias9.padStart(6);
+
 
     let textoTasa0=CHEQUE[0].tasa.toString();
     textoTasa0=textoTasa0.padStart(12);
@@ -138,6 +173,17 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     textoTasa3=textoTasa3.padStart(12);
     let textoTasa4=CHEQUE[4].tasa.toString();
     textoTasa4=textoTasa4.padStart(12);
+    let textoTasa5=CHEQUE[5].tasa.toString();
+    textoTasa5=textoTasa5.padStart(12);
+    let textoTasa6=CHEQUE[6].tasa.toString();
+    textoTasa6=textoTasa6.padStart(12);
+    let textoTasa7=CHEQUE[7].tasa.toString();
+    textoTasa7=textoTasa7.padStart(12);
+    let textoTasa8=CHEQUE[8].tasa.toString();
+    textoTasa8=textoTasa8.padStart(12);
+    let textoTasa9=CHEQUE[9].tasa.toString();
+    textoTasa9=textoTasa9.padStart(12);
+
 
     let textoDif0=dif0.toString();
     textoDif0=textoDif0.padStart(14);
@@ -149,6 +195,17 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     textoDif3=textoDif3.padStart(14);
     let textoDif4=dif4.toString();
     textoDif4=textoDif4.padStart(14);    
+    let textoDif5=dif5.toString();
+    textoDif5=textoDif5.padStart(14);    
+    let textoDif6=dif6.toString();
+    textoDif6=textoDif6.padStart(14);    
+    let textoDif7=dif7.toString();
+    textoDif7=textoDif7.padStart(14);    
+    let textoDif8=dif8.toString();
+    textoDif8=textoDif8.padStart(14);    
+    let textoDif9=dif9.toString();
+    textoDif9=textoDif9.padStart(14);    
+
 
     let textoM_a_Cobrar0=CHEQUE[0].M_a_Cobrar.toString();
     textoM_a_Cobrar0=textoM_a_Cobrar0.padStart(16);
@@ -160,12 +217,31 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     textoM_a_Cobrar3=textoM_a_Cobrar3.padStart(16);     
     let textoM_a_Cobrar4=CHEQUE[4].M_a_Cobrar.toString();
     textoM_a_Cobrar4=textoM_a_Cobrar4.padStart(16);      
+    let textoM_a_Cobrar5=CHEQUE[5].M_a_Cobrar.toString();
+    textoM_a_Cobrar5=textoM_a_Cobrar5.padStart(16);      
+    let textoM_a_Cobrar6=CHEQUE[6].M_a_Cobrar.toString();
+    textoM_a_Cobrar6=textoM_a_Cobrar6.padStart(16);      
+    let textoM_a_Cobrar7=CHEQUE[7].M_a_Cobrar.toString();
+    textoM_a_Cobrar7=textoM_a_Cobrar7.padStart(16);      
+    let textoM_a_Cobrar8=CHEQUE[8].M_a_Cobrar.toString();
+    textoM_a_Cobrar8=textoM_a_Cobrar8.padStart(16);      
+    let textoM_a_Cobrar9=CHEQUE[9].M_a_Cobrar.toString();
+    textoM_a_Cobrar9=textoM_a_Cobrar9.padStart(16);      
+
+
 
     let largoTexto0=textoDias0+textoTasa0+"%"+textoDif0+textoM_a_Cobrar0;
     let largoTexto1=textoDias1+textoTasa1+"%"+textoDif1+textoM_a_Cobrar1;
     let largoTexto2=textoDias2+textoTasa2+"%"+textoDif2+textoM_a_Cobrar2;
     let largoTexto3=textoDias3+textoTasa3+"%"+textoDif3+textoM_a_Cobrar3;    
     let largoTexto4=textoDias4+textoTasa4+"%"+textoDif4+textoM_a_Cobrar4;
+    let largoTexto5=textoDias5+textoTasa5+"%"+textoDif5+textoM_a_Cobrar5;
+    let largoTexto6=textoDias6+textoTasa6+"%"+textoDif6+textoM_a_Cobrar6;
+    let largoTexto7=textoDias7+textoTasa7+"%"+textoDif7+textoM_a_Cobrar7;
+    let largoTexto8=textoDias8+textoTasa8+"%"+textoDif8+textoM_a_Cobrar8;
+    let largoTexto9=textoDias9+textoTasa9+"%"+textoDif9+textoM_a_Cobrar9;
+
+
 
     console.log(textoDias0+textoTasa0+"%"+textoDif0+textoM_a_Cobrar0);
     console.log(largoTexto0.length);
@@ -186,6 +262,21 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     if (CHEQUE[4].Mbruto != 0) {
         DATOS4.textContent=textoDias4+textoTasa4+"%"+textoDif4+textoM_a_Cobrar4;
     }
+    if (CHEQUE[5].Mbruto != 0) {
+        DATOS5.textContent=textoDias5+textoTasa5+"%"+textoDif5+textoM_a_Cobrar5;
+    }
+    if (CHEQUE[6].Mbruto != 0) {
+        DATOS6.textContent=textoDias6+textoTasa6+"%"+textoDif6+textoM_a_Cobrar6;
+    }
+    if (CHEQUE[7].Mbruto != 0) {
+        DATOS7.textContent=textoDias7+textoTasa7+"%"+textoDif7+textoM_a_Cobrar7;
+    }
+    if (CHEQUE[8].Mbruto != 0) {
+        DATOS8.textContent=textoDias8+textoTasa8+"%"+textoDif8+textoM_a_Cobrar8;
+    }
+    if (CHEQUE[9].Mbruto != 0) {
+        DATOS9.textContent=textoDias9+textoTasa9+"%"+textoDif9+textoM_a_Cobrar9;
+    }        
   }    
   
   function mostrarResultados(montoB,montoP,tasaT,cantCheqs){
