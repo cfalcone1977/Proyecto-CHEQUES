@@ -7,21 +7,24 @@
     <title>Calculo CHEQUES</title>
 </head>
 <body>
-    <div class="CAJA-tasas">
-      <h3>TASAS A APLICAR</h3>
-      <label for="TASADIARIA">Diaria</label>
+    <div class="contenedor-CAJA-tasas">
+      <h2 class="titulo">TASAS A APLICAR</h2>
+      <div class="CAJA-tasas">
+      <label for="tasa_diaria">Diaria</label>
       <input type="number" id="tasa_diaria" placeholder="% diario" size="5">
-      <label for="TASAALDIA">Al Dia</label>
+      <label for="tasa_al_dia">Al Dia</label>
       <input type="number" id="tasa_al_dia" placeholder="% al día">
-      <label for="TASA7DIAS">7D</label>
+      <label for="tasa_7dias">7D</label>
       <input type="number" id="tasa_7dias" placeholder="% 7 días">
-      <label for="TASA15DIAS">15D</label>
+      <label for="tasa_15dias">15D</label>
       <input type="number" id="tasa_15dias" placeholder="% 15 días">
-      <label for="TASA30DIAS">30D</label>
+      <label for="tasa_30dias">30D</label>
       <input type="number" id="tasa_30dias" placeholder="% 30 días">
+      </div>
     </div>  
-    <div class="CAJA-cheques">
-      <h3>CHEQUES A CALCULAR</h3>
+    <div class="contenedor-CAJA-cheques">
+      <h2 class="titulo">CHEQUES A CALCULAR</h2>
+      <div class="CAJA-cheques">
       <pre>    MONTO CHEQUE               FECHA         DIAS      PORC%        DESC$        LIQUIDAR$</pre>
       <input type="number" class="cheque" placeholder="$ 0,00">
       <input type="date" class="fecha" placeholder="DD/MM/AA"><span id="datos0"></span>
@@ -55,22 +58,26 @@
       <p></p>    
       <div class="BOTON"> 
         <button id="calcular">CALCULAR</button>
-      </div> 
-      
+      </div>   
+      </div>
     </div>
-    <div class="CAJA-resultados">
-      <h3>RESULTADOS</h3>
+
+    <div class="contenedor-CAJA-resultados">
+      <h2 class="titulo">RESULTADOS</h2>
+      <div class="CAJA-resultados">
       <pre class="resultados">MONTO TOTAL EN CHEQUES:     </pre><span id="TOTALBRUTO"></span>
-      <p></p>
+      <!--<p></p>-->
       <pre class="resultados">TASA PROMEDIO:              </pre><span id="DIFPORCENT"></span>
-      <p></p>
+      <!--<p></p>-->
       <pre class="resultados">DIFERENCIA (Profit):        </pre><span id="DIFPESOS"></span>
-      <p></p>
+      <!--<p></p>-->
       <pre class="resultados">DINERO TOTAL A PAGAR:       </pre><span id="TOTALPAGAR"></span>
+      </div>
     </div>
     <script src="index2.js"></script>
     <footer>
-      <pre> Diseñado, pensado y construido por: Cristian Falcone                  Noviembre 2024</pre>
+      <pre>Diseñado, pensado y construido por: Cristian Falcone.</pre>
+      <pre>&copy Noviembre 2024.</pre>
     </footer>
 </body>
 </html>

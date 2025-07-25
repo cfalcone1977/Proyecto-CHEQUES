@@ -118,7 +118,7 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     let dif2=CHEQUE[2].Mbruto - CHEQUE[2].M_a_Cobrar; 
     let dif3=CHEQUE[3].Mbruto - CHEQUE[3].M_a_Cobrar; 
     let dif4=CHEQUE[4].Mbruto - CHEQUE[4].M_a_Cobrar; 
-    let dif5=CHEQUE[5].Mbruto - CHEQUE[4].M_a_Cobrar; 
+    let dif5=CHEQUE[5].Mbruto - CHEQUE[5].M_a_Cobrar; 
     let dif6=CHEQUE[6].Mbruto - CHEQUE[6].M_a_Cobrar; 
     let dif7=CHEQUE[7].Mbruto - CHEQUE[7].M_a_Cobrar; 
     let dif8=CHEQUE[8].Mbruto - CHEQUE[8].M_a_Cobrar; 
@@ -247,36 +247,59 @@ DiferenciaProfit.textContent="$ " + Diferencia;
     console.log(largoTexto0.length);
     console.log(textoDias1+textoTasa1+"%"+textoDif1+textoM_a_Cobrar1);
     console.log(largoTexto1.length);
+
     if (CHEQUE[0].Mbruto != 0) {
         DATOS0.textContent=textoDias0+textoTasa0+"%"+textoDif0+textoM_a_Cobrar0;
-    }
+    }else{
+          DATOS0.textContent="";
+         }
     if (CHEQUE[1].Mbruto != 0) {
         DATOS1.textContent=textoDias1+textoTasa1+"%"+textoDif1+textoM_a_Cobrar1;
-    }
+    }else{
+          DATOS1.textContent="";
+         }
     if (CHEQUE[2].Mbruto != 0) {
         DATOS2.textContent=textoDias2+textoTasa2+"%"+textoDif2+textoM_a_Cobrar2;
-    }
+    }else{
+          DATOS2.textContent="";
+         }
     if (CHEQUE[3].Mbruto != 0) {
         DATOS3.textContent=textoDias3+textoTasa3+"%"+textoDif3+textoM_a_Cobrar3;
-    }
+    }else{
+          DATOS3.textContent="";
+         }
     if (CHEQUE[4].Mbruto != 0) {
         DATOS4.textContent=textoDias4+textoTasa4+"%"+textoDif4+textoM_a_Cobrar4;
-    }
+    }else{
+          DATOS4.textContent="";
+         }
     if (CHEQUE[5].Mbruto != 0) {
         DATOS5.textContent=textoDias5+textoTasa5+"%"+textoDif5+textoM_a_Cobrar5;
-    }
+    }else{
+          DATOS5.textContent="";
+         }
     if (CHEQUE[6].Mbruto != 0) {
         DATOS6.textContent=textoDias6+textoTasa6+"%"+textoDif6+textoM_a_Cobrar6;
-    }
+    }else{
+          DATOS6.textContent="";
+         }
     if (CHEQUE[7].Mbruto != 0) {
         DATOS7.textContent=textoDias7+textoTasa7+"%"+textoDif7+textoM_a_Cobrar7;
-    }
+    }else{
+          DATOS7.textContent="";
+         }
     if (CHEQUE[8].Mbruto != 0) {
         DATOS8.textContent=textoDias8+textoTasa8+"%"+textoDif8+textoM_a_Cobrar8;
-    }
+    }else{
+          DATOS8.textContent="";
+         }    
+
     if (CHEQUE[9].Mbruto != 0) {
         DATOS9.textContent=textoDias9+textoTasa9+"%"+textoDif9+textoM_a_Cobrar9;
-    }        
+    }else{
+          DATOS9.textContent="";
+         }       
+
   }    
   
   function mostrarResultados(montoB,montoP,tasaT,cantCheqs){
@@ -300,6 +323,7 @@ DiferenciaProfit.textContent="$ " + Diferencia;
       let montoTotalBruto=0;
       let tasaTotal=0;
       let contador=0;
+
       for (let i = 0; i < cheque_aux.length; i=i+1) {
         console.log(i);
               cheque[i].Mbruto=Number(cheque_aux[i].value);
@@ -309,13 +333,19 @@ DiferenciaProfit.textContent="$ " + Diferencia;
               cheque[i].M_a_Cobrar=CalculoM_a_Cobrar(cheque[i].tasa,cheque[i].Mbruto);
               montoTotalBruto=montoTotalBruto + cheque[i].Mbruto;
               montoTotalPagar=montoTotalPagar+cheque[i].M_a_Cobrar;
-              if (Number(cheque[i].Mbruto)>0) {
+              if ((Number(cheque[i].Mbruto))>0) {
                                                 tasaTotal=Number(tasaTotal)+Number(cheque[i].tasa);
                                                 contador=contador+1;
-                                               }
+                                               }else{
+                                                     
+                                                    }
             }    
       mostrarDatos(cheque);
-      mostrarResultados(montoTotalBruto,montoTotalPagar,tasaTotal,contador);
+      console.log("cantidad de cheques: ",contador);
+      if (montoTotalBruto!=0 || montoTotalPagar!=0 || tasaTotal!=0 || contador!=0){
+                              mostrarResultados(montoTotalBruto,montoTotalPagar,tasaTotal,contador);
+                                                                                  }
+
                      });
 
 

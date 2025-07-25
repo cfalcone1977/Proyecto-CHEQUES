@@ -1,50 +1,103 @@
-.resultados {
- margin-bottom: 0;
- display: inline-block;
+body{
+  background-color: rgb(243, 243, 231);
 }
+
 
 .BOTON {
  text-align: center;
 }
 
-#calcular {
-  background-color: green;
 
+#calcular {
+  width: 100px;
+  height: 30px;
+  border-radius: 7px;
+  background-color: green;
+  box-shadow: 5px 5px 10px rgb(100, 136, 100);
 }
 #datos0, #datos1, #datos2, #datos3, #datos4, #datos5, #datos6, #datos7, #datos8, #datos9{
   font-family: monospace;
   white-space: pre;
 }
 
+.titulo{
+  margin-bottom: 5px; /* Elimina el margen superior por defecto del h3 */
+}
+
+.contenedor-CAJA-tasas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .CAJA-tasas{
+  background-color: rgb(241, 241, 241);
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
   border:1px solid beige;
   border-radius: 10px;
   padding: 15px;
-  width: 650px;
-  margin-top: 10px;
   box-shadow: 5px 5px 10px black;
-  /*display: flex;
-  flex-direction: row;*/
   }
 .CAJA-tasas input{
   width: 75px;
   height: 15px;
 }  
 
+.contenedor-CAJA-cheques{
+ margin-top: 25px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
 .CAJA-cheques{
+  background-color:rgb(241, 241, 241);
   border:1px solid beige;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px 25px;
   width: 650px;
-  margin-top: 10px;
+  margin-top: 0px;
   box-shadow: 5px 5px 10px black;
   }
 
+.contenedor-CAJA-resultados{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
 .CAJA-resultados{
+background-color: rgb(241, 241, 241);
+display: flex;
+flex-wrap: wrap;
+flex-direction:column;
+align-items: center;
 border:1px solid beige;
 border-radius: 10px;
-padding: 15px;
-width: 650px;
-margin-top: 10px;
+padding: 5% 20%;
 box-shadow: 5px 5px 10px black;
+}
+footer{
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   margin-top: 30px; /* Elimina los márgenes superior e inferior por defecto */
+    line-height: 0em;
+}
+
+@media (max-width: 650px){
+.CAJA-tasas{
+  flex-direction:column;
+           }
+
 }
