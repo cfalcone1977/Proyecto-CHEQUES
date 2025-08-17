@@ -1,0 +1,49 @@
+.container, #containerCheque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#datosCheque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#entidad, #numero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+#boton{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#containerCheque{
+    margin-top: 10px;
+}
+#containerCheque, #panelInformacionDenunciado{
+    background-color: rgb(241, 241, 241);
+    box-shadow: 5px 5px 10px black;
+    border:1px solid beige;
+    border-radius: 10px;
+    width: 80%;
+}
+#panelInformacionCheque{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+h1{
+    text-align: center;
+}
+ #numeroCHQ{
+  width: 95px;
+  height: 20px;
+
+ }
+ #bancos{
+  width: 320px;
+  height: 25px;
+  margin-bottom: 15px;
+ }

@@ -1,20 +1,65 @@
-body{
-  background-color: rgb(243, 243, 231);
+
+html {
+    scroll-behavior: smooth;
+  }
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+main{
+ scroll-margin-top: 70px;
 }
 
+nav{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    align-content: center;
+    background-color: #00425A;
+    height: 70px;
+    width: 100%;
+    opacity: 0.8;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #EFF5F5;
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 7px;
+    text-transform: uppercase;
+}
+li a:hover{
+   background:green;
+   transition: .5s;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(243, 243, 231);
+}
 
 .BOTON {
  text-align: center;
 }
 
 
-#calcular {
+#calcular, #boton {
   width: 100px;
   height: 30px;
   border-radius: 7px;
   background-color: green;
   box-shadow: 5px 5px 10px rgb(100, 136, 100);
 }
+
 #datos0, #datos1, #datos2, #datos3, #datos4, #datos5, #datos6, #datos7, #datos8, #datos9{
   font-family: monospace;
   white-space: pre;
@@ -29,6 +74,7 @@ body{
   flex-direction: column;
   align-items: center;
 }
+
 .CAJA-tasas{
   background-color: rgb(241, 241, 241);
   font-size: 18px;
@@ -93,6 +139,45 @@ footer{
   align-items: center;
    margin-top: 30px; /* Elimina los márgenes superior e inferior por defecto */
     line-height: 0em;
+}
+
+#ventanaModal{
+  width: 280px;
+  height: 300px;
+  background-color: rgb(243, 243, 231);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}
+#porque{
+  font-size: 14px;
+}
+#aliasBanco{
+  font-size: 14px;
+  font-weight: bold;
+}
+#usdt, #usdc, #btc{
+  font-weight: bold;
+}
+#usdt{
+  color: green;
+}
+#usdc{
+  color: blue;
+}
+#btc{
+  color: orange;
+}
+#btncerrarModal{
+  width: 60px;
+  height: 25px;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px black;
+  border: none; 
+  outline: none;
 }
 
 @media (max-width: 650px){

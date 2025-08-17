@@ -1,3 +1,9 @@
+
+const boton_donar=document.getElementById("donar");
+const ventana_modal=document.getElementById("ventanaModal");
+const boton_cerrar_modal=document.getElementById("btncerrarModal");
+
+
 const CHQ = {
     Mbruto: 0,
     fcobro: "01/01/2025",
@@ -103,14 +109,12 @@ montoP=montoP.toLocaleString('es-Es',{minimumFractionDigits: 2, maximumFractionD
 TotalPagar.textContent="$ "+ montoP;
 Diferencia=Diferencia.toLocaleString('es-Es',{minimumFractionDigits: 2, maximumFractionDigits: 2});
 DiferenciaProfit.textContent="$ " + Diferencia;
+}
 
-
-  }
-
-  function CalculoM_a_Cobrar(tasa,monto){   //funcion que recibe fecha y monto de cada uno de los cheques, calcula dias, 
+function CalculoM_a_Cobrar(tasa,monto){   //funcion que recibe fecha y monto de cada uno de los cheques, calcula dias, 
         let monto_a_pagar=monto-((monto/100)*tasa);
         return monto_a_pagar;
-      }
+}
   function mostrarDatos(CHEQUE){
     console.log(`Monto Bruto: ${CHEQUE[0].Mbruto} fecha de Cobro: ${CHEQUE[0].fcobro} dias: ${CHEQUE[0].dias} tasa: ${CHEQUE[0].tasa} a pagar: ${CHEQUE[0].M_a_Cobrar}`);
     let dif0=CHEQUE[0].Mbruto - CHEQUE[0].M_a_Cobrar; 
@@ -308,7 +312,7 @@ DiferenciaProfit.textContent="$ " + Diferencia;
       TotalBruto.textContent="$ "+montoB;
       tasaT=tasaT/cantCheqs;
       tasaT=tasaT.toLocaleString('es-Es',{minimumFractionDigits:2, maximumFractionDigits:2});
-      DiferenciaPorcent.textContent=tasaT + " %";
+      DiferenciaPorcent.textContent=(tasaT!="NaN")? tasaT + " %" : " %";
       montoP=montoP.toLocaleString('es-Es',{minimumFractionDigits: 2, maximumFractionDigits: 2}); // transforma el numero a formato 000.000.000,00.-
       TotalPagar.textContent="$ "+ montoP;
       Diferencia=Diferencia.toLocaleString('es-Es',{minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -317,6 +321,17 @@ DiferenciaProfit.textContent="$ " + Diferencia;
   
   }
   
+   
+  if (window.localStorage.getItem("cheques")){
+                                            console.log("existen Datos");
+                                             }
+  boton_donar.addEventListener("click",()=>{
+     console.log("Abrir Modal");
+     ventana_modal.showModal();
+     boton_cerrar_modal.addEventListener("click",()=>{
+                                            ventana_modal.close();
+     });
+  });
 
   boton_calcular.addEventListener("click",()=>{
       let montoTotalPagar=0;
@@ -340,56 +355,16 @@ DiferenciaProfit.textContent="$ " + Diferencia;
                                                      
                                                     }
             }    
+
       mostrarDatos(cheque);
       console.log("cantidad de cheques: ",contador);
       if (montoTotalBruto!=0 || montoTotalPagar!=0 || tasaTotal!=0 || contador!=0){
+                              window.localStorage.setItem("cheques",JSON.stringify(cheque));
+                              console.log(JSON.stringify(cheque));
                               mostrarResultados(montoTotalBruto,montoTotalPagar,tasaTotal,contador);
-                                                                                  }
+                                                                                  } else {
+                                                                                     mostrarResultados(0,0,0,0);
+                                                                                  };
 
-                     });
-
-
-
-
-
-
-
-      //fetch("https://api.bcra.gob.ar/cheques/v1.0/entidades")
-      //.then(res => res.json())    
-      //.then(data => {
-      //       const BANCOS=[];
-      //       const nuevoBanco={codigo:data.codigoEntidad, nombre:data.denominacion};
-      //       console.log(data);
-      //              });
-               
-     /*
-      const banco={numero:0,nombre:""};
-      async function traerEntidades (){
-         try{
-           const res=await fetch(dirEntidades);
-           const {results} = await res.json();
-           let BANCOS=[];
-           let banco={numero:0,nombre:""};
-           console.log(results.length);
-           for (let i = 0; i < results.length; i=i+1) {
-                  banco.numero=results[i].codigoEntidad;
-                  banco.nombre=results[i].denominacion;
-                  console.log("Nro.:",banco.numero," Nombre:",banco.nombre);
-                  console.log(banco);
-                  BANCOS.push(banco);
-                  console.log(BANCOS[i].nombre);
-           }
-            }
-         catch (error){
-            console.log(error);
-            }
-      console.log("-------------------------");
-      console.log(BANCOS[15].nombre);      
-      }
-
-      traerEntidades();
-
-
-     */
-                                              
+                     });                           
   

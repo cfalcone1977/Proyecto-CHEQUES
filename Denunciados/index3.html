@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="../Denunciados/index3.css">
     <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../ControlCUIT/index2.css">    
     <title>Herramientas Financieras</title>  
 </head>
 <body>
@@ -19,30 +20,24 @@
             </ul>
         </nav>
 </header>   
-<div class="container text-center">
-    <div id="superior" class="row">
-        <section id="ingresoCUIT" class="col-sm-12 col-md-6 text-center separacion-secciones">
-            <h1 style="font-size: 20px;">DATOS A CHEQUEAR</h1>
-            <label for="">CUIT:</label>
-            <input id="CUIT" type="tel" maxlength="11" placeholder="20261346959">
-            <p></p>
+<div class="container">
+    <div id="containerCheque">
+        <section id="datosCheque">
+            <h1 style="font-size: 20px;">DATOS CHEQUE</h1>
+            <div id="entidad">
+              <select name="" id="bancos">
+              </select>
+            </div>
+            <div id="numero">
+              <label for="numeroCHQ">NRO. CHQ:</label>
+              <input id="numeroCHQ" type="tel" maxlength="8" placeholder="00000001">
+            </div>
             <button id="boton" type="button" class="btn btn-dark">CONSULTA</button>
         </section>
-        <section id="datosCliente" class="col-sm-12 col-md-6 text-center separacion-secciones">
-            <h1 style="font-size: 20px;">DATOS CLIENTE</h1>
-            <p id="contenedor_datos_cliente"></p>
-        </section>
     </div>
-    <div>
-    <section id="panelInformacion" class="row" class="col-sm-12 text-center">
-        <h1 style="font-size: 20px;">SITUACION EN BANCOS</h1>
+    <div id="panelInformacionDenunciado">
+        <h1 style="font-size: 20px;">SITUACION CHEQUE</h1>
         <p id="contenedor_situacion_bancos"></p>
-    </section>
-    <section id="panelCheques" class="row" class="col-sm-12 text-center">
-        <h1 style="font-size: 20px;">DETALLE CHEQUES</h1>
-        <p id="contenedor_situacion_cheques"></p>
-        <p style="font-weight:bold; font-size: 20px;"id="montos"></p>
-    </section>   
     </div>
 </div> 
   <dialog id="ventanaModal">
@@ -61,6 +56,6 @@
       <pre>Diseñado, pensado y construido por: Cristian Falcone.</pre>
       <pre>&copy Noviembre 2024.</pre>
   </footer>
-    <script src="index2.js"></script>
+    <script src="./index3.js"></script>
 </body>
 </html>

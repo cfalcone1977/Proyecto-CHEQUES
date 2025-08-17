@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Calculo CHEQUES</title>
+    <title>Herramientas Financieras</title>
 </head>
 <body>
+  <header>
+        <nav>
+            <ul>
+                <li><a href="#secCalculos" class="opcionMenu">Calculo</a></li>
+                <li><a href="./ControlCUIT/index2.html" class="opcionMenu">Consulta</a></li>
+                <li><a href="./Denunciados/index3.html" class="opcionMenu">DENUNCIADOS</a></li>
+                <li><a href="" class="opcionMenu">Automatizacion(soon)</a></li>
+                <li><a class="opcionMenu" id="donar">DONAR</a></li>
+            </ul>
+        </nav>
+  </header>
+  <main id="secCalculos">
     <div class="contenedor-CAJA-tasas">
       <h2 class="titulo">TASAS A APLICAR</h2>
       <div class="CAJA-tasas">
@@ -74,10 +86,23 @@
       <pre class="resultados">DINERO TOTAL A PAGAR:       </pre><span id="TOTALPAGAR"></span>
       </div>
     </div>
-    <script src="index2.js"></script>
-    <footer>
+  </main>
+  <footer>
       <pre>Diseñado, pensado y construido por: Cristian Falcone.</pre>
       <pre>&copy Noviembre 2024.</pre>
-    </footer>
+  </footer>
+  <dialog id="ventanaModal">
+    <div id="contenedorModal" class="row text-center row-gap-1">  
+        <h2 id="titulo">Porque donar?</h2>
+        <p id="porque">Tu donación nos ayuda a cubrir los costos, dedicar más tiempo a desarrollar, crecer y seguir ofreciendo valor.</p>
+        <p></p>
+        <p id="aliasBanco">ALIAS: cristianfalcone.mp</p>
+        <p id="usdt">USDT(BEP20): 0x05d334e2dda0fb50f128f971118db5c4548de551</p>
+        <p id="usdc">USDC(BEP20): 0x05d334e2dda0fb50f128f971118db5c4548de551</p>
+        <p id="btc">BTC(Bitcoin): 1K8a1S4kPFrEszPKVdPZvmYdJb8ZnshYUp</p> 
+        <button id="btncerrarModal">Cerrar</button>      
+    </div>          
+  </dialog> 
+  <script src="index.js"></script>   
 </body>
 </html>

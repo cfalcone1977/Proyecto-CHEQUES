@@ -1,0 +1,64 @@
+body {
+    overflow-y: scroll; /* Fuerza la barra de scroll vertical a estar siempre visible */
+}
+.separacion-secciones {
+    width: calc(50% - 10px); /* Ajusta el ancho para tener en cuenta el margen */
+    margin: 0 5px; /* Margen horizontal de 5px */
+}
+
+#ingresoCUIT,#datosCliente{
+    justify-items: center;
+    border:1px solid rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px black;
+    }
+#panelInformacion, #panelCheques{
+    justify-items: center;
+    border:1px solid rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+#ingresoCUIT{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Elimina la apariencia por defecto de los botones */
+    margin: 0; /* Asegura que no haya margen que ocupe espacio */
+}
+
+
+#CUIT{
+  width: 95px;
+  height: 20px;
+}
+#superior{
+  display: flex;
+  direction: row;
+}
+
+@media (max-width: 767.98px) {
+  .separacion-secciones {
+    width: 100%;
+  }
+
+#panelInformacion, #panelCheques{
+  font-size: 12px;
+}
+pre{
+  font-size: 12px;
+}
+}
+
